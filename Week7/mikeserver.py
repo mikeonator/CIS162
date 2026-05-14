@@ -16,5 +16,5 @@ with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
             data = conn.recv(1024)
             if not data:
                 break
-            print(f'Received from client ({addr}):', repr(data))
+            print(f'Received from ({addr}):', repr(data))
             conn.sendall(f'Hello, {addr}, I am the server!'.encode('utf-8'))
